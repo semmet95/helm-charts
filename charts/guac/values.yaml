@@ -526,7 +526,6 @@ minio:
 atlas:
   enabled: true
   image:
-    # overriding the default entrypoint here so we could reuse db-address
     command: ['sh', '-c', 'atlas migrate apply --dir file:///app/migrations --url $DB_ADDRESS']
     repository: ghcr.io/guacsec/guac/atlas-migration
     # if not set appVersion field from Chart.yaml is used
