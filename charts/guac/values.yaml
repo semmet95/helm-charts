@@ -524,7 +524,7 @@ minio:
       policy: readwrite
 
 atlas:
-  enabled: true
+  enabled: false
   image:
     # overriding default entrypoint to re-use the db-address directly
     command: ['sh', '-c', 'atlas migrate apply --dir file:///app/migrations --url $DB_ADDRESS']
